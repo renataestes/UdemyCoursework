@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>For-Loops</title>
+    </head>
+
+
+    <body>
+
+        <style>
+        
+            div{
+                border-style: dotted;
+                border-color: blue;
+                text-align: center;
+                padding: 10px; 
+            }
+        
+        </style>
+        
+        <div id="tweetDiv"></div>
+    
+        <script type="text/javascript">
+            
+            var tweetString = "";
+            
+            var tweets = ["Hi everyone!", "You da bestest", "O-kurr!!", "Bye bye now"]
+            
+            
+            var i =0;
+            
+            while (i<tweets.length) {
+        
+//            for(var i=0; i<tweets.length; i++) {
+//                alert(tweets[i]);
+                
+                tweetString = tweetString + "<p>" + tweets[i] + "<p>";
+                
+                i++;
+            }
+            
+            document.getElementById("tweetDiv").innerHTML = tweetString;
+        
+        </script>
+    
+    </body>
+
+
+</html>

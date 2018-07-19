@@ -1,0 +1,41 @@
+<html>
+
+    <head>
+    
+        <title>Javascript</title>
+    
+    </head>
+
+    <body>   
+        
+        <form>
+            
+        <p>What is the magic word? <input type="text" id="input"></p>
+            
+        <p><button id="button">Submit</button></p>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("button").onclick = function() {
+                
+                var textEntered = "";
+                
+                    textEntered = document.getElementById("input").value;
+                
+                    var magicText = "heyyou!";
+                
+                    if (textEntered == magicText) {
+                        alert("Access has been granted!")
+                    } else {
+                        alert("Try again!")
+                    }
+                
+            }
+            
+            
+            
+        </script>
+        
+    </body>
+    
+</html>

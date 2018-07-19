@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>How Many Fingers Am I Holding Up?</title>
+        
+        <style>
+        
+            h1{
+                text-align: center;
+            }
+            
+            #input {
+                margin-left: 40%;
+                text-align: center;
+                border-style: double;
+                padding: 10px 15px;
+            }   
+            
+            #guess {
+                background-color: cornflowerblue;
+                border-radius:10%;
+                color: white;
+                padding: 7px 12px;
+                text-align: center;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        
+        <p>How Many Fingers Are YOU Holding Up?</p>
+        
+        <p>
+        <select id="myNumber">
+            
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>2</option>
+          <option>1</option>
+            
+        </select>
+        
+        <button id="guess">Guess!</button></p>
+        
+        <script type="text/javascript"> 
+            
+            document.getElementById("guess").onclick = function() {
+                
+            var myNumber = document.getElementById("myNumber").value;
+                
+            var gotIt = false;
+                
+                var numofGuesses = 1;
+                
+            while(gotIt == false) {
+                
+            var guess = Math.random(); 
+                
+                guess=guess*6;
+                
+                guess = Math.floor(guess);
+                
+                if(guess == myNumber) {
+                    
+                    gotIt = true;
+                    alert ("got it! It was a " + guess + ". It took me " + numofGuesses + " guesses.");
+                    // Computer Wins
+                } else {
+                    numofGuesses++;
+                    //Computer sucks
+                }
+            }
+        }
+        
+      /*  
+        <h1>How Many Fingers Am I Holding Up?</h1>
+        <input type="text" id="input" placeholder="Enter # Here">
+        <button id="guess">Guess</button>
+
+        
+        <script type="text/javascript">
+        
+            document.getElementById("guess").onclick = function() {
+                var textEntered = "";
+                
+                    textEntered = document.getElementById("input").value;
+                
+                var numberofFingers = Math.floor(Math.random()*6);
+                
+                if(textEntered == numberofFingers) {
+                    alert("You Are Correct!")
+                } else {
+                    alert("Good guess. The number was " + numberofFingers +". Try again!")
+                }
+            }    
+        */
+            
+            
+        </script> 
+    
+    </body>
+
+</html>
